@@ -1,4 +1,3 @@
-import logo from "../assets/logo.png";
 import heroPizza from "../assets/pizza.png";
 import { PRIMARY_PHONE, SITE } from "../data/site";
 
@@ -107,26 +106,6 @@ function HeroImage() {
               "radial-gradient(ellipse at center, transparent 50%, rgba(43,24,16,0.2) 100%)",
           }}
         />
-      </div>
-
-      {/* Logo as a circular stamp overlapping the bottom-left corner */}
-      <div
-        className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 lg:-bottom-10 lg:-left-10"
-        style={{ transform: "rotate(-6deg)" }}
-      >
-        <div
-          className="bg-cream rounded-full p-3 sm:p-4 border border-ink-2/15"
-          style={{
-            boxShadow:
-              "0 0 0 4px var(--color-paper), 0 0 0 5px var(--color-red-dark), 0 20px 40px -10px rgba(43,24,16,0.4)",
-          }}
-        >
-          <img
-            src={logo}
-            alt={SITE.name}
-            className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] lg:w-[160px] lg:h-[160px] object-contain"
-          />
-        </div>
       </div>
 
       {/* "Est. 1993" hand-written ribbon - top right */}
