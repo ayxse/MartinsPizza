@@ -42,7 +42,7 @@ function HeroText() {
         >
           enamora
         </span>
-        .
+    
       </h1>
 
       <p className="mt-7 font-display italic text-[20px] sm:text-[22px] text-ink-2 max-w-[560px] mx-auto lg:mx-0 leading-relaxed">
