@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color palette — rustic Italian trattoria */
+  --color-paper: #f4ead5;
+  --color-paper-2: #ead9b6;
+  --color-cream: #fff8e7;
+  --color-ink: #2b1810;
+  --color-ink-2: #5a3a25;
+  --color-red: #9a2916;
+  --color-red-dark: #6e1d0e;
+  --color-green: #3d5b3a;
+  --color-green-dark: #26371f;
+  --color-gold: #c9a961;
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", serif;
+  --font-condensed: "Bebas Neue", sans-serif;
+  --font-script: "Caveat", cursive;
+  --font-body: "Lato", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(154, 41, 22, 0.04), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(61, 91, 58, 0.04), transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.17 0 0 0 0 0.09 0 0 0 0 0.06 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Reusable component classes */
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: 1.75rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 1rem 2.125rem;
+    font-family: var(--font-condensed);
+    letter-spacing: 0.12em;
+    font-size: 0.9375rem;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: 0;
+  }
+
+  .btn-red {
+    background-color: var(--color-red);
+    color: var(--color-cream);
+    box-shadow: 4px 4px 0 var(--color-ink);
+  }
+  .btn-red:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-ink);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--color-ink);
+    border: 2px solid var(--color-ink);
+    box-shadow: 4px 4px 0 var(--color-red);
+  }
+  .btn-outline:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--color-red);
+  }
+
+  /* Section heading patterns */
+  .kicker {
+    font-family: var(--font-script);
+    font-size: 1.875rem;
+    color: var(--color-red);
+    transform: rotate(-2deg);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.1;
+    color: var(--color-ink);
+  }
+  .section-title b {
+    font-family: var(--font-condensed);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--color-red-dark);
+    display: block;
+    font-size: 0.7em;
+    margin-top: 0.375rem;
+  }
+}
