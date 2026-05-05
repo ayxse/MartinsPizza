@@ -62,8 +62,8 @@ export const SITE = {
         zip: "00692",
       },
       phone: {
-        display: "(787) 251-1733",
-        href: "tel:7872511733",
+        display: "(787) 883-3101",
+        href: "tel:+17878833101",
       },
       mapsUrl:
         "https://www.google.com/maps/search/?api=1&query=Martin%27s+Pizza+Palace+Calle+Marginal+H-36+Vega+Alta+PR+00692",
