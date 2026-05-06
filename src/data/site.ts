@@ -30,7 +30,7 @@ export const SITE = {
       { days: "Lunes", range: "Cerrado", closed: true },
       { days: "Mar – Jue", range: "11:00 AM – 8:00 PM" },
       { days: "Vie – Sáb", range: "11:00 AM – 9:00 PM" },
-      { days: "Domingo", range: "11:00 AM – 8:00 PM" },
+      { days: "Domingo",   range: "11:00 AM – 8:00 PM" },
     ],
   },
 
@@ -72,9 +72,6 @@ export const SITE = {
     },
   ] satisfies readonly Location[],
 } as const;
-
-/** Convenience: the primary phone shown in nav/CTA. Both share for now. */
-export const PRIMARY_PHONE = SITE.locations[0].phone;
 
 export const NAV_LINKS = [
   { href: "#calidad", label: "Calidad" },

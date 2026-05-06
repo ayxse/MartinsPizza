@@ -1,5 +1,5 @@
 import heroPizza from "../assets/pizza.png";
-import { PRIMARY_PHONE, SITE } from "../data/site";
+import { SITE } from "../data/site";
 
 export default function Hero() {
   return (
@@ -27,12 +27,14 @@ export default function Hero() {
 function HeroText() {
   return (
     <div className="text-center lg:text-left">
-      <span
-        className="font-script text-[26px] sm:text-[28px] text-red inline-block mb-4"
-        style={{ transform: "rotate(-3deg)" }}
-      >
-        ~ Auténtica pizzería familiar ~
-      </span>
+      <div className="flex justify-center lg:justify-start lg:pl-1 mb-4">
+        <span
+          className="font-script text-[26px] sm:text-[28px] text-red"
+          style={{ transform: "rotate(-3deg)", transformOrigin: "center" }}
+        >
+          ~ Auténtica pizzería familiar ~
+        </span>
+      </div>
 
       <h1 className="mt-2 font-display font-medium italic text-[clamp(56px,8.5vw,104px)] leading-[0.92] text-ink tracking-tight">
         Sabor que <br className="hidden sm:block" />
@@ -55,7 +57,7 @@ function HeroText() {
         <a href="#menu" className="btn btn-red">
           Ver Nuestro Menú
         </a>
-        <a href={PRIMARY_PHONE.href} className="btn btn-outline">
+        <a href="#visita" className="btn btn-outline">
           Llama y Ordena
         </a>
       </div>
