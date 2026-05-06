@@ -27,10 +27,10 @@ export const SITE = {
   hours: {
     summary: "Mar – Dom · Lunes cerrado",
     schedule: [
+      { days: "Lunes", range: "Cerrado", closed: true },
       { days: "Mar – Jue", range: "11:00 AM – 8:00 PM" },
       { days: "Vie – Sáb", range: "11:00 AM – 9:00 PM" },
       { days: "Domingo", range: "11:00 AM – 8:00 PM" },
-      { days: "Lunes", range: "Cerrado", closed: true },
     ],
   },
 

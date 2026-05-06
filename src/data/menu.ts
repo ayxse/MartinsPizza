@@ -1,4 +1,4 @@
-export type PizzaSize = "medium" | "large" | "xlarge" | "sportman" | "calzon";
+          export type PizzaSize = "medium" | "large" | "xlarge" | "sportman" | "calzon";
 
 export interface Pizza {
   name: string;
@@ -216,5 +216,99 @@ export const PIZZAS: Pizza[] = [
       sportman: "$26.50",
       calzon: "$11.50",
     },
+  },
+];
+
+export interface MenuItem {
+  name: string;
+  /** Precio mostrado tal cual (ej. "$12.50"). Omitir si la categoría no lo lista. */
+  price?: string;
+  /** Aclaración corta junto al nombre (ej. "Honey BBQ"). */
+  note?: string;
+}
+
+export interface MenuCategory {
+  id: string;
+  title: string;
+  items: MenuItem[];
+  /** Mostrado al pie cuando los items no traen precio. */
+  priceNote?: string;
+}
+
+const ASK_IN_STORE = "Consulta precios en el local";
+
+export const MENU_CATEGORIES: MenuCategory[] = [
+  {
+    id: "aperitivos",
+    title: "Aperitivos",
+    priceNote: ASK_IN_STORE,
+    items: [
+      { name: "Mozarella Sticks" },
+      { name: "Alitas de Pollo", note: "Honey BBQ" },
+      { name: "Pan con Ajo" },
+      { name: "Palitroques con Queso" },
+      { name: "Albóndigas en Salsa" },
+      { name: "Pan con Queso" },
+    ],
+  },
+  {
+    id: "pastas",
+    title: "Pastas",
+    items: [
+      { name: "Spaguetti o Penne con Albóndigas", price: "$12.50" },
+      { name: "Spaguetti o Penne en Combinación", price: "$13.95" },
+      { name: "Spaguetti o Penne con Camarones", price: "$13.95" },
+      { name: "Spaguetti o Penne Alfredo Albóndigas", price: "$13.50" },
+      { name: "Spaguetti o Penne Alfredo Pollo", price: "$13.95" },
+      { name: "Spaguetti o Penne Alfredo Camarones", price: "$14.50" },
+    ],
+  },
+  {
+    id: "sandwiches",
+    title: "Sandwiches",
+    items: [
+      { name: "Meatball", price: "$10.75" },
+      { name: "Choripán", price: "$10.75" },
+      { name: "Pollo", price: "$10.75" },
+    ],
+  },
+  {
+    id: "lasanas",
+    title: "Lasañas",
+    items: [
+      { name: "Lasagna de Pollo", price: "$11.75" },
+      { name: "Lasagna de Carne", price: "$11.75" },
+      { name: "Lasagna Carne", note: "Combinación", price: "$13.95" },
+      { name: "Lasagna Pollo", note: "Combinación", price: "$13.95" },
+    ],
+  },
+  {
+    id: "postres",
+    title: "Postres",
+    priceNote: ASK_IN_STORE,
+    items: [
+      { name: "Flan de Vainilla o Queso" },
+      { name: "Cheesecake" },
+      { name: "Brownie" },
+      { name: "Choco Martin's" },
+      { name: "Tres Leches" },
+      { name: "Mantecados", note: "8 sabores distintos" },
+    ],
+  },
+  {
+    id: "bebidas",
+    title: "Bebidas",
+    priceNote: ASK_IN_STORE,
+    items: [
+      { name: "Refrescos" },
+      { name: "Piña Colada" },
+      { name: "Batidas" },
+      { name: "Jugos" },
+      { name: "Frappé" },
+      { name: "Blackouts" },
+      { name: "Cervezas" },
+      { name: "Tragos" },
+      { name: "Vinos" },
+    ],
   },
 ];

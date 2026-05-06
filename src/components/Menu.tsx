@@ -1,4 +1,5 @@
 import { PIZZAS, SIZE_LABELS, type PizzaSize } from "../data/menu";
+import MenuExtras from "./MenuExtras";
 import SectionHead from "./SectionHead";
 
 const SIZE_ORDER: PizzaSize[] = ["medium", "large", "xlarge", "sportman", "calzon"];
@@ -14,10 +15,11 @@ export default function Menu() {
               Nuestro <b>Menú</b>
             </>
           }
-          description="Una selección clásica de pizzas y calzones, en cinco tamaños para cada apetito."
+          description="Pizzas y calzones en cinco tamaños, además de pastas, sandwiches, postres y más — todo recién hecho en casa."
         />
 
         <MenuPaper />
+        <MenuExtras />
       </div>
     </section>
   );
@@ -50,7 +52,7 @@ function MenuPaper() {
           ~ Pizzas y Calzones ~
         </span>
         <h3 className="font-display italic text-[clamp(36px,5vw,54px)] text-red-dark">
-          Menú della Casa
+          Menú de la Casa
         </h3>
       </header>
 
